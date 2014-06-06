@@ -3,7 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
 
     <ui:composition template="/template.xhtml">
         <ui:define name="title">
@@ -62,7 +63,7 @@
                         </h:column>
                         <h:column>
                             <f:facet name="header">
-                                <h:outputText value="#{bundle.ListProdutoTitle_idFabricante}xxxxxx"/>
+                                <h:outputText value="#{bundle.ListProdutoTitle_idFabricante}"/>
                             </f:facet>
                             <h:outputText value="#{item.idFabricante}"/>
                         </h:column>
@@ -74,12 +75,15 @@
                             <h:outputText value=" "/>
                             <h:commandLink action="#{produtoController.prepareEdit}" value="#{bundle.ListProdutoEditLink}"/>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{produtoController.destroy}" value="#{bundle.ListProdutoDestroyLink}"/>
+                            
                         </h:column>
                     </h:dataTable>
+                    
+                    
+                    
                 </h:panelGroup>
                 <br />
-                <h:commandLink action="#{produtoController.prepareCreate}" value="#{bundle.ListProdutoCreateLink}"/>
+               
                 <br />
                 <br />
                 <h:link outcome="/index" value="#{bundle.ListProdutoIndexLink}"/>

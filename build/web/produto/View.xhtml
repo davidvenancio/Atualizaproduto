@@ -32,16 +32,11 @@
                         <f:convertNumber type="currency" locale="#{facesContext.viewRoot.locale}" />
                     </h:outputText>
                     
-                    <h:outputText value="#{bundle.ViewFabricanteLabel_nomeFab}"/>
-                    <h:outputText value="#{produtoController.selected.idFabricante}" title="#{bundle.ViewFabricanteTitle_nomeFab}"/>
+                    <h:outputText value="#{bundle.ViewProdutoLabel_idFabricante}"/>
+                    <h:outputText value="#{produtoController.selected.idFabricante}" title="#{bundle.ViewProdutoTitle_idFabricante}"/>
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{produtoController.destroyAndView}" value="#{bundle.ViewProdutoDestroyLink}"/>
-                <br />
-                <br />
                 <h:link outcome="Edit" value="#{bundle.ViewProdutoEditLink}"/>
-                <br />
-                <h:commandLink action="#{produtoController.prepareCreate}" value="#{bundle.ViewProdutoCreateLink}" />
                 <br />
                 <h:commandLink action="#{produtoController.prepareList}" value="#{bundle.ViewProdutoShowAllLink}"/>
                 <br />

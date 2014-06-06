@@ -44,14 +44,11 @@
                             </f:facet>
                             <h:commandLink action="#{fabricanteController.prepareView}" value="#{bundle.ListFabricanteViewLink}"/>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{fabricanteController.prepareEdit}" value="#{bundle.ListFabricanteEditLink}"/>
-                            <h:outputText value=" "/>
-                            <h:commandLink action="#{fabricanteController.destroy}" value="#{bundle.ListFabricanteDestroyLink}"/>
+
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>
                 <br />
-                <h:commandLink action="#{fabricanteController.prepareCreate}" value="#{bundle.ListFabricanteCreateLink}"/>
                 <br />
                 <br />
                 <h:link outcome="/index" value="#{bundle.ListFabricanteIndexLink}"/>
